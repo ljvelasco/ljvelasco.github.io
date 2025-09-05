@@ -1,0 +1,63 @@
+.home .header {
+    display: flex;
+    justify-content: space-between;
+    align-items:end;
+    position: fixed;
+    top: 0;
+    height: fit-content;
+    padding: 1.5rem 0 1.2rem 0;
+    z-index: 999;
+    background-color: $fondo;
+    width: calc(100vw - 3rem);
+
+    h1 {
+        @include h3;
+        @include animation;
+        color: $texto;
+        font-weight: 500;
+
+        &:hover {
+            color: $texto80;
+        }
+    }
+
+    .nav {
+        display: flex;
+        align-items: flex-end;
+        flex-flow: nowrap;
+        gap: 1.5rem;
+
+        .navElem {
+            @include h5;
+            color: $texto80;
+            margin: 0;
+            @include animation;
+            
+            padding-bottom: 0.3rem;
+            @media screen and (max-width: 750px) {
+                display: none;
+            }
+
+            &:hover {
+                color: $texto;
+            }
+        }
+
+        .selected{
+            color: $acento;
+            border-bottom: 1px solid $acento;
+            font-weight: 400;
+        }
+
+        .abrirMenu{
+            display: none;
+            @media screen and (max-width: 750px) {
+                display: block;
+            }
+        }
+    }
+}
+
+.color {
+    background-color: red;
+}
