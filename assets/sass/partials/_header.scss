@@ -9,6 +9,9 @@
     z-index: 999;
     background-color: $fondo;
     width: calc(100vw - 3rem);
+    left: 1.5rem;
+    // transform: translateX(-50%);
+    // border: 1px solid red;
 
     h1 {
         @include h3;
@@ -51,6 +54,7 @@
 
         .abrirMenu{
             display: none;
+            transform: translateY(0.3rem);
             @media screen and (max-width: 750px) {
                 display: block;
             }
